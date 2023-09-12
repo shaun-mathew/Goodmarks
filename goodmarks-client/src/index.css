@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter";
+  font-size: 16px;
+}
+
+/* Style the scrollbar track */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #6e6e6e;
+}
+
+.notification-enter {
+  transform: translateY(-1.3rem);
+}
+.notification-enter-active {
+  transform: translateY(0);
+  transition: transform 300ms ease-in;
+}
+.notification-exit {
+  transform: translateY(0);
+}
+.notification-exit-active {
+  transform: translateY(-1.3rem);
+  transition: transform 300ms ease-in;
+}
+
+.password-enter {
+  height: 0rem;
+}
+.password-enter-active {
+  height: 2.25rem;
+  transition: height 100ms ease-in;
+}
+.password-exit {
+  height: 2.25rem;
+}
+.password-exit-active {
+  height: 0rem;
+  transition: height 100ms ease-in;
+}

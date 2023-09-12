@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Goodmarks",
+  "description": "Bookmarks made good",
+  "version": "1.0",
+  "icons": {},
+  "action": {
+    "default_popup": "index.html",
+    "default_icons": {}
+  },
+  "permissions": ["activeTab", "scripting", "cookies"],
+  "host_permissions": ["http://localhost:1234/*"]
+}

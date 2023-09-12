@@ -1,0 +1,49 @@
+version: '3.1'
+services:
+  postgres:
+    image: postgres
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${PG_DB}
+      PGPORT: ${DB_PORT}
+    volumes:
+      - pg_data_dev:/var/lib/postgresql/data
+  weaviate:
+    image: semitechnologies/weaviate:1.19.6
+    restart: on-failure:0
+    ports:
+      - ${WEAVIATE_PORT}:${WEAVIATE_PORT}
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - ${WEAVIATE_PORT}
+      - --scheme
+      - http
+    environment:
+      QUERY_DEFAULTS_LIMIT: 20
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: text2vec-transformers
+      ENABLE_MODULES: text2vec-transformers
+      TRANSFORMERS_INFERENCE_API: http://t2v-transformers:8080
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_dev:/var/lib/weaviate
+  t2v-transformers:
+    image: semitechnologies/transformers-inference:sentence-transformers-all-MiniLM-L6-v2
+    environment:
+      ENABLE_CUDA: 0 # set to 1 to enable
+
+  adminer:
+    image: adminer
+    ports:
+      - 8081:8080
+    depends_on:
+      - postgres
+volumes:
+  pg_data_dev:
+  weaviate_dev:

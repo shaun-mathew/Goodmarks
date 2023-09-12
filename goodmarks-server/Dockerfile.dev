@@ -1,0 +1,15 @@
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+ARG NODE_USER=node
+ARG NODE_UID=1000
+
+RUN adduser -D -u $NODE_UID $NODE_USER
+USER $NODE_USER

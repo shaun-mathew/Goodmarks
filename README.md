@@ -2,12 +2,9 @@
 <p align="center">✨ A self-hostable, semantically searchable bookmarks extension for Chrome and Firefox ✨</p>
 
 <p align="center">
-    <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/6e5c6226-c3f3-4d2f-9bd0-3e7f62601db0" width="400" hspace=10>
-    <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/bc8be8d7-72a6-4d66-94e7-d6424053d032" width="400" hspace=10>
-</p>
-<p align="center">
-    <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/66db2871-9c1e-454c-b818-748bc1c21735" width="400" hspace=5>
-</p>
+    <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/6e5c6226-c3f3-4d2f-9bd0-3e7f62601db0" width="400">
+    <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/bc8be8d7-72a6-4d66-94e7-d6424053d032" width="400">
+    <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/66db2871-9c1e-454c-b818-748bc1c21735" width="400">
 
 ## ✨ Features
 - Fire and forget bookmarks. Simply save them by clicking on the extension.

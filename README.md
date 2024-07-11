@@ -1,5 +1,5 @@
 <h1 align="center">📑 Goodmarks</h1>
-<p align="center">✨ A self-hostable, semantically searchable bookmarks extension for Chrome and Firefox ✨</p>
+<p align="center">✨ A self-hostable, semantically searchable bookmarks extension for Chrome and Firefox using Vector Databases ✨</p>
 
 <p align="center">
     <img src="https://github.com/shaun-mathew/Goodmarks/assets/16690478/6e5c6226-c3f3-4d2f-9bd0-3e7f62601db0" width="400">
